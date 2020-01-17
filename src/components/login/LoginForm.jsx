@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import InputGroup from './InputGroup';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -30,12 +31,7 @@ const LoginForm = () => {
 		<FullDiv className="col-md-6 d-flex align-items-center">
 			<form className="form-group p-3 w-100">
 				<h2 className="mb-4">Sign in</h2>
-				<div className="input-group input-group-lg my-3">
-					<div class="input-group-prepend">
-						<span class="input-group-text bg-white" id="basic-addon1">
-							<FaEnvelope size={25} />
-						</span>
-					</div>
+				<InputGroup icon={<FaEnvelope size={25} />}>
 					<input
 						value={username}
 						onChange={e => setUsername(e.target.value)}
@@ -44,13 +40,8 @@ const LoginForm = () => {
 						className="form-control"
 						aria-describedby="basic-addon1"
 					/>
-				</div>
-				<div className="input-group input-group-lg my-3">
-					<div class="input-group-prepend">
-						<span class="input-group-text bg-white" id="basic-addon1">
-							<FaLock size={25} />
-						</span>
-					</div>
+				</InputGroup>
+				<InputGroup icon={<FaLock size={25} />}>
 					<input
 						value={password}
 						onChange={e => setPassword(e.target.value)}
@@ -58,7 +49,7 @@ const LoginForm = () => {
 						type="password"
 						className="form-control"
 					/>
-				</div>
+				</InputGroup>
 				<button onClick={login} className="btn btn-primary btn-lg py-3 btn-block mx-auto w-50 mt-4 shadow-sm">
 					Login
 				</button>

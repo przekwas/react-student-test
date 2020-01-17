@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hero from './components/home/Hero';
-import LoginForm from './components/home/LoginForm';
+import LoginForm from './components/login/LoginForm';
 
 const App = () => {
 	return (
